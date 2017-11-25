@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class MapView: MKMapView {
+    private var currentUserLocation: CLLocationCoordinate2D?
     private let viewModel: MapViewModel
     private let locationManager: CLLocationManager
 
@@ -42,7 +43,7 @@ class MapView: MKMapView {
 }
 
 extension MapView {
-    fileprivate func centerUserLocation() {
+    func centerUserLocation() {
         let region = MKCoordinateRegion(center: userLocation.coordinate,
                                         span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007))
         setRegion(region, animated: true)
@@ -71,7 +72,10 @@ extension MapView {
 
 extension MapView: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        centerUserLocation()
+        if self.currentUserLocation == nil {
+            self.currentUserLocation = userLocation.coordinate
+            centerUserLocation()
+        }
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
