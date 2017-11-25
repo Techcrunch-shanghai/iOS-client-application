@@ -25,7 +25,8 @@ class CouponsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Coupons"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "back",
+        view.backgroundColor = UIColor.darkGray
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "main",
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(self.dismissController))
@@ -49,6 +50,7 @@ class CouponsViewController: UIViewController {
     }
 
     private func setupViews() {
+        tableView.backgroundColor = UIColor.clear
         tableView.tableFooterView = UIView()
         tableView.dataSource = self
         tableView.delegate = self

@@ -14,7 +14,7 @@ class AwardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Awards"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back",
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "main",
                                                            style: .done,
                                                            target: self,
                                                            action: #selector(self.dismissController))

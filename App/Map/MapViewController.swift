@@ -43,7 +43,7 @@ class MapViewController: UIViewController {
 
     @objc private func displayCoupons() {
         let controller = CouponsViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
+        let navigationController = NavigationViewController(rootViewController: controller)
         navigationController.view.backgroundColor = UIColor.white
         navigationController.isHeroEnabled = true
         navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.right), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.left))
@@ -56,7 +56,7 @@ class MapViewController: UIViewController {
 
     @objc private func displayAwards() {
         let controller = AwardsViewController()
-        let navigationController = UINavigationController(rootViewController: controller)
+        let navigationController = NavigationViewController(rootViewController: controller)
         navigationController.view.backgroundColor = UIColor.white
         navigationController.isHeroEnabled = true
         navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.left), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.right))

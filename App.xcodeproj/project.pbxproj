@@ -25,6 +25,7 @@
 		BB5D629A1FC9ACCE0055F4F5 /* CouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62991FC9ACCE0055F4F5 /* CouponViewModel.swift */; };
 		BB5D629C1FC9ADA10055F4F5 /* FakeCouponService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */; };
 		BB5D629E1FC9AE3A0055F4F5 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */; };
+		BB5D62A01FC9B6AE0055F4F5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629F1FC9B6AE0055F4F5 /* NavigationViewController.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		BB5D62991FC9ACCE0055F4F5 /* CouponViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewModel.swift; sourceTree = "<group>"; };
 		BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCouponService.swift; sourceTree = "<group>"; };
 		BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
+		BB5D629F1FC9B6AE0055F4F5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				BB16F2781FC9456600AF2F70 /* Assets.xcassets */,
 				BB16F27A1FC9456600AF2F70 /* LaunchScreen.storyboard */,
 				BB16F27D1FC9456600AF2F70 /* Info.plist */,
+				BB5D629F1FC9B6AE0055F4F5 /* NavigationViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */,
 				BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */,
 				BB5D62981FC9AC7B0055F4F5 /* Coupon.swift in Sources */,
+				BB5D62A01FC9B6AE0055F4F5 /* NavigationViewController.swift in Sources */,
 				BB5D62961FC97B880055F4F5 /* AwardsViewController.swift in Sources */,
 				BB5D62811FC952440055F4F5 /* MapAnnotation.swift in Sources */,
 				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
