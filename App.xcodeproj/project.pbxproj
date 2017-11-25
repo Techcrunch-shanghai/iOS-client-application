@@ -19,6 +19,7 @@
 		BB5D62811FC952440055F4F5 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62801FC952440055F4F5 /* MapAnnotation.swift */; };
 		BB5D62831FC9526D0055F4F5 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62821FC9526D0055F4F5 /* DataPoint.swift */; };
 		BB5D62861FC95E7D0055F4F5 /* FakeMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */; };
+		BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62871FC971AC0055F4F5 /* MapButton.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		BB5D62801FC952440055F4F5 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		BB5D62821FC9526D0055F4F5 /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
 		BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMapService.swift; sourceTree = "<group>"; };
+		BB5D62871FC971AC0055F4F5 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				BB5D627D1FC951C20055F4F5 /* MapView */,
 				BB5D62751FC949E90055F4F5 /* MapViewController.swift */,
 				BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */,
+				BB5D62871FC971AC0055F4F5 /* MapButton.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -244,10 +247,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +271,7 @@
 				BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */,
 				BB5D62811FC952440055F4F5 /* MapAnnotation.swift in Sources */,
 				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
+				BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */,
 				BB5D627F1FC952170055F4F5 /* MapPinView.swift in Sources */,
 				BB5D62861FC95E7D0055F4F5 /* FakeMapService.swift in Sources */,
 				BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */,

@@ -39,6 +39,7 @@ class MapView: MKMapView {
             weakSelf.removeAnnotations(weakSelf.annotations)
             weakSelf.addAnnotations(weakSelf.viewModel.annotations)
         }
+        viewModel.start()
     }
 }
 
