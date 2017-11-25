@@ -22,6 +22,10 @@
 		BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62871FC971AC0055F4F5 /* MapButton.swift */; };
 		BB5D62931FC97B780055F4F5 /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */; };
 		BB5D62961FC97B880055F4F5 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62951FC97B880055F4F5 /* AwardsViewController.swift */; };
+		BB5D62981FC9AC7B0055F4F5 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62971FC9AC7B0055F4F5 /* Coupon.swift */; };
+		BB5D629A1FC9ACCE0055F4F5 /* CouponViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62991FC9ACCE0055F4F5 /* CouponViewModel.swift */; };
+		BB5D629C1FC9ADA10055F4F5 /* FakeCouponService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */; };
+		BB5D629E1FC9AE3A0055F4F5 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,10 @@
 		BB5D62871FC971AC0055F4F5 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewController.swift; sourceTree = "<group>"; };
 		BB5D62951FC97B880055F4F5 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
+		BB5D62971FC9AC7B0055F4F5 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		BB5D62991FC9ACCE0055F4F5 /* CouponViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponViewModel.swift; sourceTree = "<group>"; };
+		BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCouponService.swift; sourceTree = "<group>"; };
+		BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */,
+				BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */,
 			);
 			path = Fake;
 			sourceTree = "<group>";
@@ -137,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */,
+				BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */,
+				BB5D62971FC9AC7B0055F4F5 /* Coupon.swift */,
+				BB5D62991FC9ACCE0055F4F5 /* CouponViewModel.swift */,
 			);
 			path = Coupons;
 			sourceTree = "<group>";
@@ -292,15 +304,19 @@
 			files = (
 				BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */,
 				BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */,
+				BB5D62981FC9AC7B0055F4F5 /* Coupon.swift in Sources */,
 				BB5D62961FC97B880055F4F5 /* AwardsViewController.swift in Sources */,
 				BB5D62811FC952440055F4F5 /* MapAnnotation.swift in Sources */,
 				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
 				BB5D62931FC97B780055F4F5 /* CouponsViewController.swift in Sources */,
+				BB5D629C1FC9ADA10055F4F5 /* FakeCouponService.swift in Sources */,
 				BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */,
 				BB5D627F1FC952170055F4F5 /* MapPinView.swift in Sources */,
 				BB5D62861FC95E7D0055F4F5 /* FakeMapService.swift in Sources */,
+				BB5D629E1FC9AE3A0055F4F5 /* CouponTableViewCell.swift in Sources */,
 				BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */,
 				BB5D62831FC9526D0055F4F5 /* DataPoint.swift in Sources */,
+				BB5D629A1FC9ACCE0055F4F5 /* CouponViewModel.swift in Sources */,
 				BB5D62761FC949E90055F4F5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

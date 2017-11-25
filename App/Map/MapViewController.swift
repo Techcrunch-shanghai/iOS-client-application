@@ -22,6 +22,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
+        isHeroEnabled = true
         searchBarView.delegate = self
         buttonCoupons.backgroundColor = UIColor.blue
         buttonLocationCenter.backgroundColor = UIColor.blue
@@ -42,8 +43,11 @@ class MapViewController: UIViewController {
 
     @objc private func displayCoupons() {
         let controller = CouponsViewController()
-        controller.heroModalAnimationType = .cover(direction: HeroDefaultAnimationType.Direction.left)
-        present(controller, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.view.backgroundColor = UIColor.white
+        navigationController.isHeroEnabled = true
+        navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.right), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.left))
+        present(navigationController, animated: true, completion: nil)
     }
 
     @objc private func centerUserLocation() {
@@ -52,8 +56,11 @@ class MapViewController: UIViewController {
 
     @objc private func displayAwards() {
         let controller = AwardsViewController()
-        controller.heroModalAnimationType = .cover(direction: HeroDefaultAnimationType.Direction.right)
-        present(controller, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.view.backgroundColor = UIColor.white
+        navigationController.isHeroEnabled = true
+        navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.left), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.right))
+        present(navigationController, animated: true, completion: nil)
     }
 
     private func setupLayout() {

@@ -10,7 +10,8 @@ import UIKit
 
 class FakeMapService: MapServiceProvider {
     private var points: [MapAnnotation] {
-        return []
+        return [
+        ]
     }
 
     func fetchPoints(completion: @escaping ([MapAnnotation]) -> Void) {

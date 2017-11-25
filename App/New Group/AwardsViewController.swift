@@ -7,17 +7,20 @@
 //
 
 import UIKit
+import Hero
 
 class AwardsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.clear
+        title = "Awards"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "back",
+                                                           style: .done,
+                                                           target: self,
+                                                           action: #selector(self.dismissController))
+    }
 
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.dark))
-        view.addSubview(blurView)
-        blurView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+    @objc private func dismissController() {
+        hero_dismissViewController()
     }
 }
