@@ -20,6 +20,8 @@
 		BB5D62831FC9526D0055F4F5 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62821FC9526D0055F4F5 /* DataPoint.swift */; };
 		BB5D62861FC95E7D0055F4F5 /* FakeMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */; };
 		BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62871FC971AC0055F4F5 /* MapButton.swift */; };
+		BB5D62931FC97B780055F4F5 /* CouponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */; };
+		BB5D62961FC97B880055F4F5 /* AwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62951FC97B880055F4F5 /* AwardsViewController.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		BB5D62821FC9526D0055F4F5 /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
 		BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMapService.swift; sourceTree = "<group>"; };
 		BB5D62871FC971AC0055F4F5 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
+		BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponsViewController.swift; sourceTree = "<group>"; };
+		BB5D62951FC97B880055F4F5 /* AwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsViewController.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 		BB16F2701FC9456600AF2F70 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BB5D62941FC97B7B0055F4F5 /* Awards */,
+				BB5D62911FC97B690055F4F5 /* Coupons */,
 				BB5D62841FC95E560055F4F5 /* Fake */,
 				BB5D62741FC949DF0055F4F5 /* Map */,
 				BB16F2711FC9456600AF2F70 /* AppDelegate.swift */,
@@ -125,6 +131,23 @@
 				BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */,
 			);
 			path = Fake;
+			sourceTree = "<group>";
+		};
+		BB5D62911FC97B690055F4F5 /* Coupons */ = {
+			isa = PBXGroup;
+			children = (
+				BB5D62921FC97B780055F4F5 /* CouponsViewController.swift */,
+			);
+			path = Coupons;
+			sourceTree = "<group>";
+		};
+		BB5D62941FC97B7B0055F4F5 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				BB5D62951FC97B880055F4F5 /* AwardsViewController.swift */,
+			);
+			name = Awards;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		F2FD0A2FDD47237D85A01923 /* Pods */ = {
@@ -269,8 +292,10 @@
 			files = (
 				BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */,
 				BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */,
+				BB5D62961FC97B880055F4F5 /* AwardsViewController.swift in Sources */,
 				BB5D62811FC952440055F4F5 /* MapAnnotation.swift in Sources */,
 				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
+				BB5D62931FC97B780055F4F5 /* CouponsViewController.swift in Sources */,
 				BB5D62881FC971AC0055F4F5 /* MapButton.swift in Sources */,
 				BB5D627F1FC952170055F4F5 /* MapPinView.swift in Sources */,
 				BB5D62861FC95E7D0055F4F5 /* FakeMapService.swift in Sources */,

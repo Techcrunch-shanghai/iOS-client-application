@@ -8,12 +8,13 @@
 
 import UIKit
 import SnapKit
+import Hero
 
 class MapViewController: UIViewController {
     private let searchBarView = MapSearchBarView()
     private let mapView = MapView()
 
-    private let buttonFriends = MapButton(image: UIImage())
+    private let buttonCoupons = MapButton(image: UIImage())
     private let buttonLocationCenter = MapButton(image: UIImage())
     private let buttonAwards = MapButton(image: UIImage())
     
@@ -22,11 +23,11 @@ class MapViewController: UIViewController {
         setupHierarchy()
         setupLayout()
         searchBarView.delegate = self
-        buttonFriends.backgroundColor = UIColor.blue
+        buttonCoupons.backgroundColor = UIColor.blue
         buttonLocationCenter.backgroundColor = UIColor.blue
         buttonAwards.backgroundColor = UIColor.blue
 
-        buttonFriends.addTarget(self, action: #selector(self.displayFriends), for: .touchUpInside)
+        buttonCoupons.addTarget(self, action: #selector(self.displayCoupons), for: .touchUpInside)
         buttonLocationCenter.addTarget(self, action: #selector(self.centerUserLocation), for: .touchUpInside)
         buttonAwards.addTarget(self, action: #selector(self.displayAwards), for: .touchUpInside)
     }
@@ -34,21 +35,25 @@ class MapViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(mapView)
         view.addSubview(searchBarView)
-        view.addSubview(buttonFriends)
+        view.addSubview(buttonCoupons)
         view.addSubview(buttonLocationCenter)
         view.addSubview(buttonAwards)
     }
 
-    @objc private func displayFriends() {
-
+    @objc private func displayCoupons() {
+        let controller = CouponsViewController()
+        controller.heroModalAnimationType = .cover(direction: HeroDefaultAnimationType.Direction.left)
+        present(controller, animated: true, completion: nil)
     }
 
     @objc private func centerUserLocation() {
-
+        mapView.centerUserLocation()
     }
 
     @objc private func displayAwards() {
-
+        let controller = AwardsViewController()
+        controller.heroModalAnimationType = .cover(direction: HeroDefaultAnimationType.Direction.right)
+        present(controller, animated: true, completion: nil)
     }
 
     private func setupLayout() {
@@ -59,7 +64,7 @@ class MapViewController: UIViewController {
             make.top.left.right.equalToSuperview()
             make.height.equalTo(70)
         }
-        buttonFriends.snp.makeConstraints { make in
+        buttonCoupons.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(15)
             make.bottom.equalToSuperview().offset(-15)
             make.size.equalTo(CGSize(width: 40, height: 40))
