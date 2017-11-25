@@ -15,6 +15,7 @@ protocol MapSearchBarViewDelegate: class {
 
 class MapSearchBarView: UIView {
     private let searchBar = UISearchBar()
+    private let searchToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))
 
     weak var delegate: MapSearchBarViewDelegate?
 
@@ -37,6 +38,13 @@ class MapSearchBarView: UIView {
         searchBar.returnKeyType = .search
         searchBar.keyboardAppearance = .dark
         searchBar.placeholder = "Search a place"
+        searchBar.inputAccessoryView = searchToolBar
+        searchToolBar.tintColor = UIColor.black
+        searchToolBar.items = [UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(dismissSearch))]
+    }
+
+    @objc private func dismissSearch() {
+        endEditing(true)
     }
 
     private func setupHierarchy() {
