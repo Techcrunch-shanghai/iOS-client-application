@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB16F2711FC9456600AF2F70 /* AppDelegate.swift */; };
-		BB16F2741FC9456600AF2F70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB16F2731FC9456600AF2F70 /* ViewController.swift */; };
 		BB16F2771FC9456600AF2F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB16F2751FC9456600AF2F70 /* Main.storyboard */; };
 		BB16F2791FC9456600AF2F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB16F2781FC9456600AF2F70 /* Assets.xcassets */; };
 		BB16F27C1FC9456600AF2F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB16F27A1FC9456600AF2F70 /* LaunchScreen.storyboard */; };
+		BB5D62761FC949E90055F4F5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62751FC949E90055F4F5 /* MapViewController.swift */; };
+		BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62771FC949FF0055F4F5 /* MapView.swift */; };
+		BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		4E95E6C2494DCA155296C797 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB16F26E1FC9456600AF2F70 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB16F2711FC9456600AF2F70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB16F2731FC9456600AF2F70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB16F2761FC9456600AF2F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB16F2781FC9456600AF2F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB16F27B1FC9456600AF2F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB16F27D1FC9456600AF2F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB5D62751FC949E90055F4F5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BB5D62771FC949FF0055F4F5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,14 +73,24 @@
 		BB16F2701FC9456600AF2F70 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BB5D62741FC949DF0055F4F5 /* Map */,
 				BB16F2711FC9456600AF2F70 /* AppDelegate.swift */,
-				BB16F2731FC9456600AF2F70 /* ViewController.swift */,
 				BB16F2751FC9456600AF2F70 /* Main.storyboard */,
 				BB16F2781FC9456600AF2F70 /* Assets.xcassets */,
 				BB16F27A1FC9456600AF2F70 /* LaunchScreen.storyboard */,
 				BB16F27D1FC9456600AF2F70 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		BB5D62741FC949DF0055F4F5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BB5D62751FC949E90055F4F5 /* MapViewController.swift */,
+				BB5D62771FC949FF0055F4F5 /* MapView.swift */,
+				BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		F2FD0A2FDD47237D85A01923 /* Pods */ = {
@@ -198,9 +212,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-App/Pods-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB16F2741FC9456600AF2F70 /* ViewController.swift in Sources */,
 				BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */,
+				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
+				BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */,
+				BB5D62761FC949E90055F4F5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
