@@ -10,5 +10,19 @@ import UIKit
 import MapKit
 
 class MapView: MKMapView {
+    private let viewModel: MapViewModel
 
+    init(viewModel: MapViewModel = MapViewModel()) {
+        self.viewModel = viewModel
+        super.init(frame: CGRect.zero)
+        bindViewModel()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func bindViewModel() {
+
+    }
 }

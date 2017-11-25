@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
+        searchBarView.delegate = self
     }
 
     private func setupHierarchy() {
@@ -32,5 +33,11 @@ class MapViewController: UIViewController {
             make.top.left.right.equalToSuperview()
             make.height.equalTo(70)
         }
+    }
+}
+
+extension MapViewController: MapSearchBarViewDelegate {
+    func didUpdateSearch(text: String) {
+
     }
 }

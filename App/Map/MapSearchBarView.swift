@@ -9,8 +9,14 @@
 import UIKit
 import SnapKit
 
+protocol MapSearchBarViewDelegate: class {
+    func didUpdateSearch(text: String)
+}
+
 class MapSearchBarView: UIView {
     private let searchBar = UISearchBar()
+
+    weak var delegate: MapSearchBarViewDelegate?
 
     init() {
         super.init(frame: CGRect.zero)
@@ -27,6 +33,9 @@ class MapSearchBarView: UIView {
         backgroundColor = UIColor.white.withAlphaComponent(0.7)
         searchBar.isTranslucent = true
         searchBar.searchBarStyle = .minimal
+        searchBar.delegate = self
+        searchBar.returnKeyType = .search
+        searchBar.keyboardAppearance = .dark
     }
 
     private func setupHierarchy() {
@@ -40,5 +49,11 @@ class MapSearchBarView: UIView {
             make.left.equalToSuperview().offset(5)
             make.right.equalToSuperview().offset(-5)
         }
+    }
+}
+
+extension MapSearchBarView: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        delegate?.didUpdateSearch(text: searchBar.text ?? "")
     }
 }

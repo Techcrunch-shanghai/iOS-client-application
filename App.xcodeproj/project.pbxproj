@@ -14,6 +14,7 @@
 		BB5D62761FC949E90055F4F5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62751FC949E90055F4F5 /* MapViewController.swift */; };
 		BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62771FC949FF0055F4F5 /* MapView.swift */; };
 		BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */; };
+		BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D627B1FC94DE60055F4F5 /* MapViewModel.swift */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		BB5D62751FC949E90055F4F5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BB5D62771FC949FF0055F4F5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
+		BB5D627B1FC94DE60055F4F5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			children = (
 				BB5D62751FC949E90055F4F5 /* MapViewController.swift */,
 				BB5D62771FC949FF0055F4F5 /* MapView.swift */,
+				BB5D627B1FC94DE60055F4F5 /* MapViewModel.swift */,
 				BB5D62791FC94AC90055F4F5 /* MapSearchBarView.swift */,
 			);
 			path = Map;
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB16F2721FC9456600AF2F70 /* AppDelegate.swift in Sources */,
+				BB5D627C1FC94DE60055F4F5 /* MapViewModel.swift in Sources */,
 				BB5D627A1FC94AC90055F4F5 /* MapSearchBarView.swift in Sources */,
 				BB5D62781FC949FF0055F4F5 /* MapView.swift in Sources */,
 				BB5D62761FC949E90055F4F5 /* MapViewController.swift in Sources */,
