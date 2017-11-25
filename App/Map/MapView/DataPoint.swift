@@ -1,5 +1,5 @@
 //
-//  MapViewModel.swift
+//  DataPoint.swift
 //  App
 //
 //  Created by Remi Robert on 25/11/2017.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import MapKit
 
-class MapViewModel {
-
+struct DataPoint {
+    let lat: Double = 0
+    let long: Double = 0
 }

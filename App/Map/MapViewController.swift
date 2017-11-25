@@ -38,6 +38,6 @@ class MapViewController: UIViewController {
 
 extension MapViewController: MapSearchBarViewDelegate {
     func didUpdateSearch(text: String) {
-
+        
     }
 }

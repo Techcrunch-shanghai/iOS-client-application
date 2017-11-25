@@ -30,12 +30,13 @@ class MapSearchBarView: UIView {
     }
 
     private func setupViews() {
-        backgroundColor = UIColor.white.withAlphaComponent(0.7)
+        backgroundColor = UIColor.white.withAlphaComponent(0.6)
         searchBar.isTranslucent = true
         searchBar.searchBarStyle = .minimal
         searchBar.delegate = self
         searchBar.returnKeyType = .search
         searchBar.keyboardAppearance = .dark
+        searchBar.placeholder = "Search a place"
     }
 
     private func setupHierarchy() {
@@ -54,6 +55,7 @@ class MapSearchBarView: UIView {
 
 extension MapSearchBarView: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        endEditing(true)
         delegate?.didUpdateSearch(text: searchBar.text ?? "")
     }
 }
