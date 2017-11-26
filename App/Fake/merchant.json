@@ -1,84 +1,83 @@
 {
-    merchantList: [
-        {
-            name: "LAWSON",
-            location: {
-                lng: 121.487899486,
-                lat: 31.24916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/LAWSON.png', 
-        },
-        {
-            name: "McDonald",
-            location: {
-                lng: 121.377393631,
-                lat: 31.1772019583
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/Mcdonalds.png',
-        },
-        {
-            name: "ZhongXin Bank",
-            location: {
-                lng: 121.487899486,
-                lat: 31.24916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/ZhongXinBank.png',
-        },
-        {
-            name: "Dong Resturant",
-            location: {
-                lng: 121.407899486,
-                lat: 31.34916171
-            },
-            imageUrl: "https://avatar.sh1a.qingstor.com/dongresturant.png"
-        },
-        {
-            name: "ZhongXin Citic",
-            location: {
-                lng: 121.357899486,
-                lat: 31.23916171
-            },
-            imageUrl: "https://avatar.sh1a.qingstor.com/ZhongXinCITIC.png"
-        },
-        {
-            name: "Pacific Coffee",
-            location: {
-                lng: 121.547899486,
-                lat: 31.14916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/pacificcoffee.png', 
-        },
-        {
-            name: "IU hotel",
-            location: {
-                lng: 121.557899486,
-                lat: 31.33916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/iuhotel.jpeg', 
-        },
-        {
-            name: "Wan Da",
-            location: {
-                lng: 121.527899486,
-                lat: 31.26916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/wanda.png', 
-        },
-        {
-            name: "CINEMA",
-            location: {
-                lng: 121.507899486,
-                lat: 31.27916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/taipingcamera.jpeg', 
-        },
-        {
-            name: "ZhongXin Cloud",
-            location: {
-                lng: 121.387899486,
-                lat: 31.18916171
-            },
-            imageUrl: 'https://avatar.sh1a.qingstor.com/ZhongXinCloud.png', 
-        } 
-    ]
+    "merchantList": [{
+                     "name": "LAWSON",
+                     "location": {
+                     "lng": 121.487899486,
+                     "lat": 31.24916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/LAWSON.png"
+                     },
+                     {
+                     "name": "McDonald",
+                     "location": {
+                     "lng": 121.377393631,
+                     "lat": 31.1772019583
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/Mcdonalds.png"
+                     },
+                     {
+                     "name": "ZhongXin Bank",
+                     "location": {
+                     "lng": 121.487899486,
+                     "lat": 31.24916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/ZhongXinBank.png"
+                     },
+                     {
+                     "name": "Dong Resturant",
+                     "location": {
+                     "lng": 121.407899486,
+                     "lat": 31.34916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/dongresturant.png"
+                     },
+                     {
+                     "name": "ZhongXin Citic",
+                     "location": {
+                     "lng": 121.357899486,
+                     "lat": 31.23916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/ZhongXinCITIC.png"
+                     },
+                     {
+                     "name": "Pacific Coffee",
+                     "location": {
+                     "lng": 121.547899486,
+                     "lat": 31.14916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/pacificcoffee.png"
+                     },
+                     {
+                     "name": "IU hotel",
+                     "location": {
+                     "lng": 121.557899486,
+                     "lat": 31.33916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/iuhotel.jpeg"
+                     },
+                     {
+                     "name": "Wan Da",
+                     "location": {
+                     "lng": 121.527899486,
+                     "lat": 31.26916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/wanda.png"
+                     },
+                     {
+                     "name": "CINEMA",
+                     "location": {
+                     "lng": 121.507899486,
+                     "lat": 31.27916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/taipingcamera.jpeg"
+                     },
+                     {
+                     "name": "ZhongXin Cloud",
+                     "location": {
+                     "lng": 121.387899486,
+                     "lat": 31.18916171
+                     },
+                     "imageUrl": "https://avatar.sh1a.qingstor.com/ZhongXinCloud.png"
+                     }
+                     ]
 }
