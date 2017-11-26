@@ -35,7 +35,6 @@ class MapView: MKMapView {
 
     private func bindViewModel() {
         viewModel.completionHandler = { points in
-            print("points : \(points)")
             self.removeAnnotations(self.annotations)
             self.addAnnotations(points)
         }
@@ -46,7 +45,7 @@ class MapView: MKMapView {
 extension MapView {
     func centerUserLocation() {
         let region = MKCoordinateRegion(center: userLocation.coordinate,
-                                        span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007))
+                                        span: MKCoordinateSpan(latitudeDelta: 0.07, longitudeDelta: 0.07))
         setRegion(region, animated: true)
     }
 
@@ -60,7 +59,7 @@ extension MapView {
 
     fileprivate func setupAnnotationView(annotationView: MKAnnotationView, annotation: MapAnnotation) {
         let pinView = MapPinView(merchant: annotation.merchant)
-        let frameAnnotation = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let frameAnnotation = CGRect(x: 0, y: 0, width: 60, height: 60)
         annotationView.canShowCallout = false
         annotationView.frame = frameAnnotation
         annotationView.addSubview(pinView)

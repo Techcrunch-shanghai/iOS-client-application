@@ -23,7 +23,7 @@ struct Merchant {
             latitude = 0
             longitude = 0
         }
-        imageUrl = json[""] as? String
+        imageUrl = json["imageUrl"] as? String
     }
 
     static func create(fromJSON json: [String:Any]) -> [Merchant] {

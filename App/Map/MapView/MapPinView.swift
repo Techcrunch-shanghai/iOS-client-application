@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MapPinView: UIView {
     private let imageView = UIImageView()
@@ -15,14 +16,21 @@ class MapPinView: UIView {
     init(merchant: Merchant) {
         super.init(frame: CGRect.zero)
         backgroundColor = UIColor.lightGray
-        layer.borderWidth = 1
+        layer.borderWidth = 3
         layer.borderColor = UIColor.white.cgColor
-        layer.cornerRadius = 25
+        layer.cornerRadius = 30
+        imageView.contentMode = .scaleAspectFit
 
         addSubview(imageView)
         imageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(-10)
         }
+
+        guard let url = URL(string: merchant.imageUrl ?? "") else { return }
+        imageView.kf.setImage(with: url)
     }
 
     required init?(coder aDecoder: NSCoder) {
