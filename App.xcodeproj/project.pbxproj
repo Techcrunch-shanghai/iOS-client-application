@@ -26,6 +26,7 @@
 		BB5D629C1FC9ADA10055F4F5 /* FakeCouponService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */; };
 		BB5D629E1FC9AE3A0055F4F5 /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */; };
 		BB5D62A01FC9B6AE0055F4F5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D629F1FC9B6AE0055F4F5 /* NavigationViewController.swift */; };
+		BB5D62A21FCA46B30055F4F5 /* merchant.json in Resources */ = {isa = PBXBuildFile; fileRef = BB5D62A11FCA46B30055F4F5 /* merchant.json */; };
 		FA18369F74589806E90A81A4 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E95E6C2494DCA155296C797 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCouponService.swift; sourceTree = "<group>"; };
 		BB5D629D1FC9AE3A0055F4F5 /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
 		BB5D629F1FC9B6AE0055F4F5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		BB5D62A11FCA46B30055F4F5 /* merchant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = merchant.json; sourceTree = "<group>"; };
 		DB5B71C0DB595E64BCA2E353 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 		BB5D62841FC95E560055F4F5 /* Fake */ = {
 			isa = PBXGroup;
 			children = (
+				BB5D62A11FCA46B30055F4F5 /* merchant.json */,
 				BB5D62851FC95E7D0055F4F5 /* FakeMapService.swift */,
 				BB5D629B1FC9ADA10055F4F5 /* FakeCouponService.swift */,
 			);
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB16F27C1FC9456600AF2F70 /* LaunchScreen.storyboard in Resources */,
+				BB5D62A21FCA46B30055F4F5 /* merchant.json in Resources */,
 				BB16F2791FC9456600AF2F70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

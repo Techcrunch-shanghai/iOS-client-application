@@ -24,13 +24,25 @@ class MapViewController: UIViewController {
         setupLayout()
         isHeroEnabled = true
         searchBarView.delegate = self
-        buttonCoupons.backgroundColor = UIColor.blue
-        buttonLocationCenter.backgroundColor = UIColor.blue
-        buttonAwards.backgroundColor = UIColor.blue
+        buttonCoupons.backgroundColor = UIColor.darkGray
+        buttonLocationCenter.backgroundColor = UIColor.darkGray
+        buttonAwards.backgroundColor = UIColor.darkGray
+
+        buttonCoupons.setImage(UIImage(named: "coupon")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        buttonLocationCenter.setImage(UIImage(named: "location")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        buttonAwards.setImage(UIImage(named: "award")?.withRenderingMode(.alwaysTemplate), for: .normal)
+
+        buttonCoupons.imageView?.contentMode = .scaleAspectFit
+        buttonLocationCenter.imageView?.contentMode = .scaleAspectFit
+        buttonAwards.imageView?.contentMode = .scaleAspectFit
 
         buttonCoupons.addTarget(self, action: #selector(self.displayCoupons), for: .touchUpInside)
         buttonLocationCenter.addTarget(self, action: #selector(self.centerUserLocation), for: .touchUpInside)
         buttonAwards.addTarget(self, action: #selector(self.displayAwards), for: .touchUpInside)
+
+        buttonCoupons.tintColor = UIColor.white
+        buttonLocationCenter.tintColor = UIColor.white
+        buttonAwards.tintColor = UIColor.white
     }
 
     private func setupHierarchy() {
@@ -73,11 +85,11 @@ class MapViewController: UIViewController {
         }
         buttonCoupons.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(15)
-            make.bottom.equalToSuperview().offset(-15)
+            make.bottom.equalToSuperview().offset(-20)
             make.size.equalTo(CGSize(width: 40, height: 40))
         }
         buttonLocationCenter.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-15)
+            make.bottom.equalToSuperview().offset(-20)
             make.centerX.equalToSuperview()
             make.size.equalTo(CGSize(width: 60, height: 60))
         }
@@ -86,6 +98,9 @@ class MapViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-15)
             make.size.equalTo(CGSize(width: 40, height: 40))
         }
+        buttonCoupons.layer.cornerRadius = 20
+        buttonAwards.layer.cornerRadius = 20
+        buttonLocationCenter.layer.cornerRadius = 30
     }
 }
 
