@@ -11,6 +11,7 @@ import SnapKit
 
 class CouponsViewController: UIViewController {
     private let viewModel: CouponViewModel
+    private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
     private let tableView = UITableView(frame: CGRect.zero, style: .grouped)
 
     init(viewModel: CouponViewModel = CouponViewModel()) {
@@ -25,7 +26,10 @@ class CouponsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Coupons"
-        view.backgroundColor = UIColor.darkGray
+
+        view.backgroundColor = UIColor.clear
+        blurView.alpha = 0.7
+        view.addSubview(blurView)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "main",
                                                             style: .done,
                                                             target: self,
@@ -37,7 +41,7 @@ class CouponsViewController: UIViewController {
     }
 
     @objc private func dismissController() {
-        hero_dismissViewController()
+        dismiss(animated: true, completion: nil)
     }
 
     private func bindViewModel() {
@@ -59,6 +63,9 @@ class CouponsViewController: UIViewController {
     }
 
     private func setupLayout() {
+        blurView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }

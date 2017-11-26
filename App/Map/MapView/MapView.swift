@@ -59,14 +59,14 @@ extension MapView {
 
     fileprivate func setupAnnotationView(annotationView: MKAnnotationView, annotation: MapAnnotation) {
         let pinView = MapPinView(merchant: annotation.merchant)
-        let frameAnnotation = CGRect(x: 0, y: 0, width: 60, height: 60)
+        let frameAnnotation = CGRect(x: 0, y: 0, width: 70, height: 70)
         annotationView.canShowCallout = false
         annotationView.frame = frameAnnotation
         annotationView.addSubview(pinView)
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         view.backgroundColor = UIColor.green
         annotationView.detailCalloutAccessoryView = view
-        pinView.frame = frameAnnotation
+        pinView.frame = frameAnnotation 
     }
 }
 

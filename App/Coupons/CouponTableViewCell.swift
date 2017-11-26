@@ -21,7 +21,8 @@ class CouponTableViewCell: UITableViewCell {
         setupHierarchy()
         setupLayout()
         selectionStyle = .none
-        contentView.backgroundColor = UIColor.darkGray
+        backgroundColor = UIColor.clear
+        contentView.backgroundColor = UIColor.clear
         logo.contentMode = .scaleAspectFit
         containerView.layer.cornerRadius = 5
         expiration.font = UIFont.systemFont(ofSize: 11)

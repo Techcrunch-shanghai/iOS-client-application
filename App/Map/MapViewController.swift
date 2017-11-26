@@ -56,9 +56,8 @@ class MapViewController: UIViewController {
     @objc private func displayCoupons() {
         let controller = CouponsViewController()
         let navigationController = NavigationViewController(rootViewController: controller)
-        navigationController.view.backgroundColor = UIColor.white
-        navigationController.isHeroEnabled = true
-        navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.right), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.left))
+        navigationController.view.backgroundColor = UIColor.clear
+        navigationController.modalPresentationStyle = .overFullScreen
         present(navigationController, animated: true, completion: nil)
     }
 
@@ -69,9 +68,8 @@ class MapViewController: UIViewController {
     @objc private func displayAwards() {
         let controller = AwardsViewController()
         let navigationController = NavigationViewController(rootViewController: controller)
-        navigationController.view.backgroundColor = UIColor.white
-        navigationController.isHeroEnabled = true
-        navigationController.heroModalAnimationType = .selectBy(presenting: .cover(direction: HeroDefaultAnimationType.Direction.left), dismissing: .uncover(direction: HeroDefaultAnimationType.Direction.right))
+        navigationController.view.backgroundColor = UIColor.clear
+        navigationController.modalPresentationStyle = .overFullScreen
         present(navigationController, animated: true, completion: nil)
     }
 

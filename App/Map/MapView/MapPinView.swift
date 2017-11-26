@@ -15,10 +15,10 @@ class MapPinView: UIView {
 
     init(merchant: Merchant) {
         super.init(frame: CGRect.zero)
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor.white
         layer.borderWidth = 3
-        layer.borderColor = UIColor.white.cgColor
-        layer.cornerRadius = 30
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 35
         imageView.contentMode = .scaleAspectFit
 
         addSubview(imageView)
