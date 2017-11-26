@@ -20,8 +20,9 @@ class FakeMapService: MapServiceProvider {
                     return MapAnnotation(merchant: $0)
                 })
                 completion(points)
+            } else {
+                completion([])
             }
-            completion([])
         } catch {
             completion([])
         }

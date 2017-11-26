@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import SnapKit
 
 class MapPinView: UIView {
-    init() {
+    private let imageView = UIImageView()
+
+    init(merchant: Merchant) {
         super.init(frame: CGRect.zero)
-        backgroundColor = UIColor.orange
+        backgroundColor = UIColor.lightGray
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.white.cgColor
         layer.cornerRadius = 25
+
+        addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {

@@ -15,20 +15,19 @@ protocol MapServiceProvider {
 
 class MapViewModel {
     private let mapService: MapServiceProvider
-    private(set) var annotations = [MapAnnotation]() {
-        didSet {
-            completionHandler?()
-        }
-    }
-    var completionHandler: (() -> Void)?
+    private(set) var annotations = [MapAnnotation]()
+    var completionHandler: (([MapAnnotation]) -> Void)?
 
     init(mapService: MapServiceProvider = FakeMapService()) {
         self.mapService = mapService
     }
 
     func start() {
+        print("start")
         self.mapService.fetchPoints { points in
+            print("completion : \(self.completionHandler)")
             self.annotations = points
+            self.completionHandler?(points)
         }
     }
 }

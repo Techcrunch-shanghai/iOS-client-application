@@ -4,4 +4,5 @@ target 'App' do
   use_frameworks!
   pod 'SnapKit'
   pod 'Hero'
+  pod 'Kingfisher'
 end

@@ -19,14 +19,14 @@ class MapView: MKMapView {
         self.viewModel = viewModel
         self.locationManager = locationManager
         super.init(frame: CGRect.zero)
-        bindViewModel()
-        self.delegate = self
+        delegate = self
         showsUserLocation = true
         isScrollEnabled = true
         showsCompass = false
         showsPointsOfInterest = true
         tintColor = UIColor.orange
         self.locationManager.requestWhenInUseAuthorization()
+        bindViewModel()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,10 +34,10 @@ class MapView: MKMapView {
     }
 
     private func bindViewModel() {
-        viewModel.completionHandler = { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.removeAnnotations(weakSelf.annotations)
-            weakSelf.addAnnotations(weakSelf.viewModel.annotations)
+        viewModel.completionHandler = { points in
+            print("points : \(points)")
+            self.removeAnnotations(self.annotations)
+            self.addAnnotations(points)
         }
         viewModel.start()
     }
@@ -59,8 +59,8 @@ extension MapView {
     }
 
     fileprivate func setupAnnotationView(annotationView: MKAnnotationView, annotation: MapAnnotation) {
-        let pinView = MapPinView()
-        let frameAnnotation = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let pinView = MapPinView(merchant: annotation.merchant)
+        let frameAnnotation = CGRect(x: 0, y: 0, width: 50, height: 50)
         annotationView.canShowCallout = false
         annotationView.frame = frameAnnotation
         annotationView.addSubview(pinView)
